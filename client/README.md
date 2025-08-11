@@ -1,3 +1,37 @@
+<!-- 1st time ... push
+navagate to Music/PingUp .... not client
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/vinaythuppari/social-media-app.git
+git branch -M main
+git push -u origin main -->
+
+<!-- for updates
+navagate to Music/PingUp .... not client
+git add .
+git commit -m "Updated code"
+git push
+
+git add . && git commit -m "update" && git push -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
