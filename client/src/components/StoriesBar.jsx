@@ -3,6 +3,7 @@ import { dummyStoriesData } from '../assets/assets'
 import { Plus } from 'lucide-react'
 import moment from 'moment'
 import StoryModal from './StoryModal'
+import StoryViewer from './StoryViewer'
 
 const StoriesBar = () => {
     const [stories, setStories] = useState([])
@@ -33,6 +34,7 @@ const StoriesBar = () => {
                 {/* Story cards */}
                 {stories.map((story, index) => (
                     <div
+                        onClick={() => setViewStory(story)}
                         key={index}
                         className={`relative rounded-lg shadow min-w-30 max-w-30 max-h-40 cursor-pointer hover:shadow-lg transition-all duration-200 bg-gradient-to-b from-indigo-500 to-purple-600 hover:from-indigo-700 hover:to-purple-800 active:scale-95`}
                     >
@@ -54,12 +56,12 @@ const StoriesBar = () => {
                                     <img
                                         src={story.media_url}
                                         alt="story media"
-                                        className="h-full w-full object-cover hover:scale-110 transition duration 500 opacity-70 hover:opacity-80"
+                                        className="h-full w-full object-cover hover:scale-110 transition duration-500 opacity-70 hover:opacity-80"
                                     />
                                 ) : (
                                     <video
                                         src={story.media_url}
-                                        className="h-full w-full object-cover hover:scale-110 transition duration 500 opacity-70 hover:opacity-80"
+                                        className="h-full w-full object-cover hover:scale-110 transition duration-500 opacity-70 hover:opacity-80"
                                     />
                                 )}
                             </div>
@@ -71,6 +73,8 @@ const StoriesBar = () => {
             {/* Add Stories Model */}
             {showModal && <StoryModal setShowModal={setShowModal} fetchStories={fetchStories}/>}
 
+            {/* View Story Modal */}
+            {viewStory && <StoryViewer viewStory={viewStory} setViewStory={setViewStory}/>}
         </div>
     )
 }
