@@ -9,7 +9,7 @@ git branch -M main
 git push -u origin main -->
 
 <!-- for updates
-navagate to Music/PingUp .... not client
+navagate to Music/PingUp .... not client   ... use    cd ..
 git add .
 git commit -m "Updated code"
 git push
