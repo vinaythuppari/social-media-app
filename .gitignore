@@ -1,0 +1,4 @@
+frontend/.env
+*.env
+client/.env
+server/.env
