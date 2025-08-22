@@ -21,7 +21,19 @@ git add . && git commit -m "update" && git push -->
 <!-- npm install react-hot-toast -->
 
 
+<!-- backend commands 
+npm init -y 
+npm install express cors dotenv mongoose multer
+npm install --save-dev nodemon
 
+npm run server
+
+
+
+inngest
+clerk - authentication google
+mangodb atlas
+-->
 
 
 
